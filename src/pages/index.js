@@ -1,3 +1,13 @@
 import React from "react"
+import Layout from "../components/layout"
+import NameList from "../components/nameList"
 
-export default () => <div>Hello world!</div>
+
+const Home = () => (
+  <Layout>
+    <NameList></NameList>
+    <NameList></NameList>
+  </Layout>
+)
+
+export default Home
