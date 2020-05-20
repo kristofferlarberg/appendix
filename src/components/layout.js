@@ -5,9 +5,7 @@ import styled from "styled-components"
 
 const Container = styled.main`
   margin: 3rem auto;
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
+  width: calc(100vw - 4rem);
   background-color: grey;
   padding: 1rem 2rem;
 `

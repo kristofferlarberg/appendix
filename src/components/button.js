@@ -19,6 +19,12 @@ const ButtonDiv = styled.button`
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: -0.04rem;
+  cursor: pointer;
+`
+
+const AboutButton = styled(ButtonDiv)`
+  width: 50px;
+  height: 50px;
 `
 
 const Button = ({ children }) => (

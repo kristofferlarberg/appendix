@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import MoreButton from "./moreButton"
+import ButtonDiv from "./button"
 
 const Container = styled.header`
   display: flex;
@@ -9,7 +9,12 @@ const Container = styled.header`
   align-items: center;
   padding: 1rem 2rem;
   background-color: grey;
-`
+`;
+
+const AboutButton = styled(ButtonDiv)`
+  width: 50px;
+  height: 50px;
+`;
 
 const Header = () => (
   <Container>
@@ -20,7 +25,7 @@ const Header = () => (
     </nav>
     <nav>
       <Link to="./about">
-        <MoreButton></MoreButton>
+        <AboutButton>...</AboutButton>
       </Link>
     </nav>
   </Container>
