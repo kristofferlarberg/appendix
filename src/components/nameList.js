@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import Button from "./button"
 
 const Section = styled.section`
@@ -14,9 +15,13 @@ const Section = styled.section`
 
 const NameList = () => (
   <Section>
-    <h2>Rubrik</h2>
-    <Button>Namn Namnsson</Button>
-    <Button>Namn Namnsson</Button>
+    <Link to="/student">
+      <Button>Alvastina Ringqvist</Button>
+    </Link>
+    <Button>Cassandra Lorca Macchiavelli</Button>
+    <Button>Cassandra Lorca Macchiavelli</Button>
+    <Button>Cassandra Lorca Macchiavelli</Button>
+    <Button>Cassandra Lorca Macchiavelli</Button>
   </Section>
 )
 
