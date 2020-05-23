@@ -1,29 +1,42 @@
 import React from "react"
 import Layout from "../components/layout"
 import NameList from "../components/nameList"
-import styled from "styled-components"
+import Button from "../components/button"
+import { Link, graphql } from "gatsby"
 
-const Container = styled.div`
-  display: flex;
-`
-
-const Section = styled.section`
-
-`
-
-const Home = () => (
+const Home = ({ data }) => (
   <Layout>
-    <Container>
-      <Section>
+      <NameList>
         <h2>Interior Architecture and Furniture Design</h2>
-        <NameList></NameList>
-      </Section>
-      <Section>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <Link to={node.fields.slug}>
+            <Button>{node.frontmatter.name}</Button>
+          </Link>
+        ))}
+      </NameList>
+      <NameList>
         <h2>Spatial Design</h2>
-        <NameList></NameList>
-      </Section>
-    </Container>
+      </NameList>
   </Layout>
 )
 
 export default Home
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___name], order: ASC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`

@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
 
+
 const Article = styled.article`
   margin: 0;
   padding: 0;
@@ -23,23 +24,6 @@ const Descr = styled(Section)`
   width: 75vw;
   padding: 0;
   margin: 0 12rem;
-`
-
-const ImgSection = styled(Section)`
-  display: flex;
-  padding: 0;
-  margin: 4rem 0 0 0;
-`
-
-const Figure = styled.figure`
-  width: 20rem;
-  height: 20rem;
-  margin: 0;
-`
-
-const Preview = styled.img`
-  width: 100%;
-  height: auto;
 `
 
 const About = () => (
