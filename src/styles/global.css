@@ -3,7 +3,7 @@ body {
   background-color: white;
   color: black;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Inter", sans-serif;
 }
 
@@ -21,24 +21,25 @@ a:hover {
 }
 
 h1 {
-  font-size: 1.7rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 300;
   letter-spacing: -0.04rem;
   margin-block-start: 0;
   margin-block-end: 0;
+  margin-top: 0;
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.7rem;
+  font-weight: 300;
   letter-spacing: -0.04rem;
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
 h3 {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 300;
   margin-block-start: 0;
   margin-block-end: 0;
 }

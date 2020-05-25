@@ -8,6 +8,7 @@ const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  border-bottom: #aaa solid 1px;
 `
 
 const Title = styled.h1`

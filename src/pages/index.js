@@ -6,17 +6,22 @@ import { Link, graphql } from "gatsby"
 
 const Home = ({ data }) => (
   <Layout>
-      <NameList>
-        <h2>Interior Architecture and Furniture Design</h2>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Link to={node.fields.slug}>
-            <Button>{node.frontmatter.name}</Button>
-          </Link>
-        ))}
-      </NameList>
-      <NameList>
-        <h2>Spatial Design</h2>
-      </NameList>
+    <NameList>
+      <h2>Interior Architecture and Furniture Design BA</h2>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <Link to={node.fields.slug}>
+          <Button>{node.frontmatter.name}</Button>
+        </Link>
+      ))}
+    </NameList>
+    <NameList>
+      <h2>Spatial Design MA</h2>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <Link to={node.fields.slug}>
+          <Button>{node.frontmatter.name}</Button>
+        </Link>
+      ))}
+    </NameList>
   </Layout>
 )
 
