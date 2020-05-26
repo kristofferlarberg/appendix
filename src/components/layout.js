@@ -5,9 +5,9 @@ import styled from "styled-components"
 
 const Container = styled.main`
   display: flex;
-  margin: 3rem auto;
-  width: calc(100vw - 4rem);
-  padding: 1rem 2rem;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 `
 
 const Layout = ({ children }) => (

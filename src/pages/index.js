@@ -7,7 +7,7 @@ import { Link, graphql } from "gatsby"
 const Home = ({ data }) => (
   <Layout>
     <NameList>
-      <h2>Interior Architecture and Furniture Design BA</h2>
+      <h2>Interior Architecture and Furniture Design (BA)</h2>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Link to={node.fields.slug}>
           <Button>{node.frontmatter.name}</Button>
@@ -15,7 +15,7 @@ const Home = ({ data }) => (
       ))}
     </NameList>
     <NameList>
-      <h2>Spatial Design MA</h2>
+      <h2>Spatial Design (MA)</h2>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Link to={node.fields.slug}>
           <Button>{node.frontmatter.name}</Button>

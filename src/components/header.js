@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import ButtonDiv from "./button"
 
 const Container = styled.header`
   display: flex;
@@ -13,16 +12,11 @@ const Container = styled.header`
 
 const Title = styled.h1`
   color: black;
+  font-size: 1.7rem;
   
   &:hover {
     color: black;
   }
-`
-
-const AboutButton = styled(ButtonDiv)`
-  width: 50px;
-  height: 50px;
-  padding: 0;
 `
 
 export default function Header({children}) {
@@ -45,9 +39,7 @@ export default function Header({children}) {
         </Link>
       </nav>
       <nav>
-        <Link to="./about">
-          <AboutButton>...</AboutButton>
-        </Link>
+        <h2>2020</h2>
       </nav>
     </Container>
   )
