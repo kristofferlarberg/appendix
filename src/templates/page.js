@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import mediumZoom from "medium-zoom"
 
 const Article = styled.article`
   margin: 2rem;
@@ -66,7 +65,7 @@ export default function Page({ data }) {
         </Section>
         <ImgSection>
           <Figure>
-            {featuredImgFluid ? <Img fluid={featuredImgFluid} /> : null}
+            <Img fluid={featuredImgFluid} />
           </Figure>
           <Figure>{/* <Img fluid={featuredImgFluid} /> */}</Figure>
         </ImgSection>
