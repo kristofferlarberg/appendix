@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import mediumZoom from "medium-zoom"
 
 const Article = styled.article`
   margin: 2rem;
@@ -63,10 +64,9 @@ export default function Page({ data }) {
             <div dangerouslySetInnerHTML={{ __html: page.html }} />
           </Descr>
         </Section>
-        {/* Denna del villkoras senare för att skapa About-sidan */}
         <ImgSection>
           <Figure>
-            <Img fluid={featuredImgFluid} />
+            {featuredImgFluid ? <Img fluid={featuredImgFluid} /> : null}
           </Figure>
           <Figure>{/* <Img fluid={featuredImgFluid} /> */}</Figure>
         </ImgSection>
@@ -74,6 +74,8 @@ export default function Page({ data }) {
     </Layout>
   )
 }
+
+ 
 
 export const query = graphql`
   query PostQuery($slug: String!) {

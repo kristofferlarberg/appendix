@@ -22,5 +22,7 @@ module.exports = {
   ],
 }
 
+
+
 /* name: `pages`,
 name: `images`, */
