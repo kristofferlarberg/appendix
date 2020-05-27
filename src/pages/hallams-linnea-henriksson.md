@@ -13,3 +13,5 @@ I collect materials during walks and while cycling, in my wardrobe and at flea m
 Sewing by hand is a slow process that requires time and commitment, something that gives me the opportunity to reflect over the conditions of my own surroundings. In sewing, I am allowed to consciously handle repairs and damage. Every stitch is a renegotiation of the fragments I sew together.
 
 ![Image](../images/ba01.jpg)
+
+`vimeo: 5299404`
