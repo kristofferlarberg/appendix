@@ -3,7 +3,6 @@ name: "Alvastina Ringqvist"
 title: "Understanding the Importance of Tools"
 email: "mail@konstfack.se"
 website: "http://konstfack.se"
-featuredImage: ../images/testing.jpg
 
 ---
 

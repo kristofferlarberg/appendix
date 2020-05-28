@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
-import Img from "gatsby-image"
 
 const Article = styled.article`
   margin: 2rem;
@@ -23,9 +22,9 @@ const Title = styled(Section)`
 `
 
 const Descr = styled(Section)`
-  width: calc(80vw - 28rem);
+  width: 60vw;
   padding: 0;
-  margin: 0 12rem;
+  margin: 0;
 `
 
 const ImgSection = styled(Section)`
@@ -48,7 +47,6 @@ margin: 0;
 
 export default function Page({ data }) {
   const page = data.markdownRemark
-  let featuredImgFluid = page.frontmatter.featuredImage.childImageSharp.fluid
   return (
     <Layout>
       <Article>
@@ -65,9 +63,9 @@ export default function Page({ data }) {
         </Section>
         <ImgSection>
           <Figure>
-            <Img fluid={featuredImgFluid} />
+       
           </Figure>
-          <Figure>{/* <Img fluid={featuredImgFluid} /> */}</Figure>
+          <Figure></Figure>
         </ImgSection>
       </Article>
     </Layout>
@@ -85,13 +83,6 @@ export const query = graphql`
         name
         email
         website
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 1440) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }

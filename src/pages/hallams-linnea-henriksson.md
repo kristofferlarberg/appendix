@@ -3,7 +3,6 @@ name: "Hållams Linnea Henriksson"
 title: "Täcka"
 website: "http://konstfack.se"
 email: "mail@konstfack.se"
-featuredImage: ../images/ba01.jpg
 ---
 
 In my degree project, I have been absorbed by the stitch as action and the quilt as metaphor. Through patching and applications, I create textile images and objects, a sort of contemporary patchwork quilt evoking loss, care and neglect.
@@ -12,6 +11,9 @@ I collect materials during walks and while cycling, in my wardrobe and at flea m
 
 Sewing by hand is a slow process that requires time and commitment, something that gives me the opportunity to reflect over the conditions of my own surroundings. In sewing, I am allowed to consciously handle repairs and damage. Every stitch is a renegotiation of the fragments I sew together.
 
-![Image](../images/ba01.jpg)
+![Image](../images/forest.jpg)
+![Image](../images/forest2.jpg)
+
+
 
 `vimeo: 5299404`
