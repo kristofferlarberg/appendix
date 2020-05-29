@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Appendix: IA`,
+    title: `Appendix`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -15,7 +15,7 @@ module.exports = {
               wrapperStyle: "margin-top: 2rem;",
               width: 1000,
               ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              height: 400, // Optional: Overrides optional.ratio
+              
               related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
               noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
               urlOverrides: [
@@ -33,11 +33,10 @@ module.exports = {
             options: {
               maxWidth: 1400,
               linkImagesToOriginal: false,
-              wrapperStyle: "margin-top: 2rem;", 
-              /* "", */
+              wrapperStyle: "margin-top: 2rem;",
+              showCaptions: true,
             },
           },
-          
         ],
       },
     },
@@ -59,5 +58,3 @@ module.exports = {
 
 /* name: `pages`,
 name: `images`, */
-
-

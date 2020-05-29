@@ -6,11 +6,13 @@ import styled from "styled-components"
 const Article = styled.article`
   margin: 2rem;
   padding: 0;
+  height: 100vh;
 `
 
 const Section = styled.section`
   display: flex;
   width: calc(100vw - 6rem);
+  height: 100vh;
 `
 
 const Title = styled(Section)`
@@ -25,6 +27,7 @@ const Descr = styled(Section)`
   width: 60vw;
   padding: 0;
   margin: 0;
+  height: 100vh;
 `
 
 const ImgSection = styled(Section)`

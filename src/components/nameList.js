@@ -13,6 +13,7 @@ const BorderSection = styled.section`
 
 const PaddingSection = styled.section`
   padding: 2rem;
+  height: 100vh;
 `
 
 const NameList = ({ children }) => (
