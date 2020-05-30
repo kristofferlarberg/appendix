@@ -1,0 +1,63 @@
+import React from "react"
+import styled from "styled-components"
+import { Link, graphql, useStaticQuery } from "gatsby"
+
+import Button from "../components/button"
+
+const BorderSection = styled.section`
+  margin: 0;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  border-right: 1px solid #aaa;
+`
+
+const PaddingSection = styled.section`
+  padding: 2rem;
+  height: 100vh;
+`
+
+export default function IaList(props) {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___name], order: ASC }
+          filter: {
+            frontmatter: {
+              tags: { in: "Interior Architecture and Furniture Design" }
+            }
+          }
+        ) {
+          totalCount
+          edges {
+            node {
+              id
+              frontmatter {
+                name
+              }
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  return (
+    <BorderSection>
+      <PaddingSection>
+        <h2>Spatial Design (MA)</h2>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <Link to={node.fields.slug} key={node.id}>
+            <Button>{node.frontmatter.name}</Button>
+          </Link>
+        ))}
+      </PaddingSection>
+    </BorderSection>
+  )
+}

@@ -42,10 +42,9 @@ const Layout = ({ children }) => {
   return (
     <ViewPortContainer>
       {firstVisit && <Modal onClick={() => handleHideModal(false)}></Modal>}
-
       <Nav></Nav>
       <Container>{children}</Container>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </ViewPortContainer>
   )
 }
