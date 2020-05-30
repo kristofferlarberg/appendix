@@ -10,14 +10,17 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 2rem;
-  border: #aaa solid 1px;
-  margin: 2rem 0;
-  z-index: 100;
-  position: absolute;
-  background: white;
-  border: #aaa solid 1px;
   width: 60vw;
   height: auto;
+  max-height: 100%;
+  margin-top: 1rem;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: #aaa solid 1px;
+  background: white;
   font-size: 1rem;
 `
 

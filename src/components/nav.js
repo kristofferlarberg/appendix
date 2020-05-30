@@ -12,15 +12,39 @@ const Container = styled.nav`
 `
 
 const Title = styled.h1`
-  color: black;
+  color: blue;
   font-size: 1.7rem;
+  text-align: left;
+  width: 10rem;
 
   &:hover {
-    color: black;
+    color: blue;
   }
 `
 
-export default function Header(props) {
+const Ia = styled(Title)`
+  color: blue;
+  font-size: 1.7rem;
+  text-align: center;
+  width: 10rem;
+
+  &:hover {
+    color: blue;
+  }
+`
+
+const Year = styled(Title)`
+  color: blue;
+  font-size: 1.7rem;
+  text-align: right;
+  width: 10rem;
+
+  &:hover {
+    color: blue;
+  }
+`
+
+export default function Nav(props) {
   const data = useStaticQuery(
     graphql`
       query {
@@ -33,14 +57,12 @@ export default function Header(props) {
     `
   )
   return (
-   
+    <Link to="/">
       <Container {...props}>
-        <Link to="/">
-          <Title>{data.site.siteMetadata.title}</Title>
-        </Link>
-        <h2>IA</h2>
-        <h2>2020</h2>
+        <Title>{data.site.siteMetadata.title}</Title>
+        <Ia>IA</Ia>
+        <Year>2020</Year>
       </Container>
-  
+    </Link>
   )
 }

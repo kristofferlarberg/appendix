@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import styled from "styled-components"
 
 const Article = styled.article`
@@ -45,13 +46,14 @@ const Figure = styled.figure`
 `
 
 const LastLink = styled.h4`
-margin: 0;
+  margin: 0;
 `
 
 export default function Page({ data }) {
   const page = data.markdownRemark
   return (
     <Layout>
+      <SEO title={page.frontmatter.title} description={page.excerpt} />
       <Article>
         <Section>
           <Title>
@@ -65,17 +67,13 @@ export default function Page({ data }) {
           </Descr>
         </Section>
         <ImgSection>
-          <Figure>
-       
-          </Figure>
+          <Figure></Figure>
           <Figure></Figure>
         </ImgSection>
       </Article>
     </Layout>
   )
 }
-
- 
 
 export const query = graphql`
   query PostQuery($slug: String!) {
@@ -87,6 +85,7 @@ export const query = graphql`
         email
         website
       }
+      excerpt
     }
   }
 `
