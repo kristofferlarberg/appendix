@@ -1,7 +1,8 @@
 module.exports = {
+  pathPrefix: `/appendix`,
   siteMetadata: {
     title: `Appendix`,
-    description: `Documenting the graduation work of students at the Interior Architecture course at Konstfack, University of Arts, Crafts and Design. `,
+    description: `Documentation of the graduation projects from students at the Interior Architecture course at Konstfack, University of Arts, Crafts and Design. `,
     author: `Kristoffer Larberg, Per Sturesson`,
   },
   plugins: [
@@ -25,12 +26,19 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1400,
+              linkImagesToOriginal: false,
+              wrapperStyle: "margin: 2rem 0 0 0;",
+              showCaptions: true,
+            },
+          },
+          {
             resolve: "gatsby-remark-embed-video",
             options: {
-              wrapperStyle: "margin-top: 2rem;",
               width: 1000,
               ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-
               related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
               noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
               urlOverrides: [
@@ -42,14 +50,10 @@ module.exports = {
               ],
             },
           },
-
           {
-            resolve: `gatsby-remark-images`,
+            resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              maxWidth: 1400,
-              linkImagesToOriginal: false,
-              wrapperStyle: "margin-top: 2rem;",
-              showCaptions: true,
+              wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
         ],
@@ -67,9 +71,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
     `gatsby-plugin-styled-components`,
   ],
 }
-
-/* name: `pages`,
-name: `images`, */

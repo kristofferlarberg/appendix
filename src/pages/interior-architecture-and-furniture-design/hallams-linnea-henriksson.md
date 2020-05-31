@@ -11,6 +11,10 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 
 ![Image](../../images/forest.jpg "Sewing by hand is a slow process that requires time and commitment, something that gives me the opportunity to reflect over the conditions of my own surroundings. In sewing, I am allowed to consciously handle repairs and damage. Every stitch is a renegotiation of the fragments I sew together.")
+
+![gif-test](../../images/test.gif)
+
 ![Image](../../images/forest2.jpg )
 
-`vimeo: 5299404`
+`vimeo: 417086807`
+

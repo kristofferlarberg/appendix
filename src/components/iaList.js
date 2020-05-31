@@ -51,7 +51,7 @@ export default function IaList(props) {
   return (
     <BorderSection>
       <PaddingSection>
-        <h2>Spatial Design (MA)</h2>
+        <h2>Interior Architecture and Furniture Design (BA)</h2>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Link to={node.fields.slug} key={node.id}>
             <Button>{node.frontmatter.name}</Button>

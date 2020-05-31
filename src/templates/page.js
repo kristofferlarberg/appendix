@@ -5,44 +5,27 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 
 const Article = styled.article`
+  display: flex;
   margin: 2rem;
   padding: 0;
-  height: 100vh;
+  width: auto;
+  height: auto;
 `
 
-const Section = styled.section`
-  display: flex;
-  width: calc(100vw - 6rem);
-  height: 100vh;
-`
-
-const Title = styled(Section)`
+const Title = styled.section`
   display: flex;
   flex-direction: column;
   width: 20vw;
+  height: auto
   padding: 0;
   margin: 0;
 `
 
-const Descr = styled(Section)`
-  width: 60vw;
+const Content = styled.section`
+  width: calc(80vw - 14rem);
   padding: 0;
-  margin: 0;
-  height: 100vh;
-`
-
-const ImgSection = styled(Section)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 4rem 0 0 0;
-`
-
-const Figure = styled.figure`
-  width: calc(90vw - 4rem);
   height: auto;
-  margin: 0;
+  margin: 0 6rem;
 `
 
 const LastLink = styled.h4`
@@ -55,21 +38,15 @@ export default function Page({ data }) {
     <Layout>
       <SEO title={page.frontmatter.title} description={page.excerpt} />
       <Article>
-        <Section>
-          <Title>
-            <h3>{page.frontmatter.name}</h3>
-            <h4>{page.frontmatter.title}</h4>
-            <h4>{page.frontmatter.email}</h4>
-            <LastLink>{page.frontmatter.website}</LastLink>
-          </Title>
-          <Descr>
-            <div dangerouslySetInnerHTML={{ __html: page.html }} />
-          </Descr>
-        </Section>
-        <ImgSection>
-          <Figure></Figure>
-          <Figure></Figure>
-        </ImgSection>
+        <Title>
+          <h3>{page.frontmatter.name}</h3>
+          <h4>{page.frontmatter.title}</h4>
+          <h4>{page.frontmatter.email}</h4>
+          <LastLink>{page.frontmatter.website}</LastLink>
+        </Title>
+        <Content>
+          <div dangerouslySetInnerHTML={{ __html: page.html }} />
+        </Content>
       </Article>
     </Layout>
   )
@@ -77,6 +54,7 @@ export default function Page({ data }) {
 
 export const query = graphql`
   query PostQuery($slug: String!) {
+    
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -84,6 +62,7 @@ export const query = graphql`
         name
         email
         website
+        
       }
       excerpt
     }

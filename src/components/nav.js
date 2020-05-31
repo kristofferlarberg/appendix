@@ -12,35 +12,35 @@ const Container = styled.nav`
 `
 
 const Title = styled.h1`
-  color: blue;
+  color: black;
   font-size: 1.7rem;
   text-align: left;
   width: 10rem;
 
   &:hover {
-    color: blue;
+    color: black;
   }
 `
 
 const Ia = styled(Title)`
-  color: blue;
+  color: black;
   font-size: 1.7rem;
   text-align: center;
   width: 10rem;
 
   &:hover {
-    color: blue;
+    color: black;
   }
 `
 
 const Year = styled(Title)`
-  color: blue;
+  color: black;
   font-size: 1.7rem;
   text-align: right;
   width: 10rem;
 
   &:hover {
-    color: blue;
+    color: black;
   }
 `
 

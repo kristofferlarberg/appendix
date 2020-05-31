@@ -1,8 +1,8 @@
 ---
-name: "Lorem Ipsum Ipsum"
-title: "Loremtitel"
-email: "mail@konstfack.se"
+name: "Namn Namnnamn Namn"
+title: "Titeltest Test Test"
 website: "http://konstfack.se"
+email: "mail@konstfack.se"
 tags: ["Spatial Design"]
 ---
 
