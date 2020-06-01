@@ -22,12 +22,12 @@ const ButtonDiv = styled.button`
     border: blue 1px solid;
     color: blue;
   }
+
+  @media (max-width: 800px) {
+    font-size: 1.2rem;
+  }
 `
 
-const Button = ({ children }) => (
-    <ButtonDiv>
-      {children}
-    </ButtonDiv>
-)
+const Button = ({ children }) => <ButtonDiv>{children}</ButtonDiv>
 
 export default Button

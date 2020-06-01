@@ -11,6 +11,10 @@ const BorderSection = styled.section`
   align-items: left;
   justify-content: center;
   border-right: 1px solid #aaa;
+  @media (max-width: 800px) {
+    width: 100vw;
+    height: auto;
+  }
 `
 
 const PaddingSection = styled.section`

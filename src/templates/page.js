@@ -10,6 +10,10 @@ const Article = styled.article`
   padding: 0;
   width: auto;
   height: auto;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin: 1rem;
+  }
 `
 
 const Header = styled.header`
@@ -19,6 +23,9 @@ const Header = styled.header`
   height: auto
   padding: 0;
   margin: 0;
+    @media (max-width: 800px) {
+    width: calc(100vw - 2rem);
+  }
 `
 
 const Content = styled.section`
@@ -27,6 +34,10 @@ const Content = styled.section`
   height: auto;
   margin: 0 6rem;
   padding: 0;
+  @media (max-width: 800px) {
+    margin: 2rem 0 0 0;
+    width: calc(100vw - 2rem);
+  }
 `
 
 const Title = styled.h3`
@@ -64,7 +75,6 @@ export default function Page({ data }) {
 
 export const query = graphql`
   query PostQuery($slug: String!) {
-    
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

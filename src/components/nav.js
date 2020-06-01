@@ -7,8 +7,11 @@ const Container = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  height: 4rem;
+  height: auto;
   border-bottom: #aaa solid 1px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `
 
 const Title = styled.h1`
@@ -18,6 +21,10 @@ const Title = styled.h1`
 
   &:hover {
     color: black;
+  }
+
+  @media (max-width: 800px) {
+    text-align: center;
   }
 `
 
@@ -38,6 +45,10 @@ const Year = styled(Title)`
 
   &:hover {
     color: black;
+  }
+
+  @media (max-width: 800px) {
+    text-align: center;
   }
 `
 

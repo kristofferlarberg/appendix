@@ -8,12 +8,18 @@ const Container = styled.footer`
   padding: 1rem 2rem;
   border-top: #aaa solid 1px;
   height: auto;
+  @media (max-width: 800px) {
+    justify-content: center
+  }
 `
 
 const KonstfackLogo = styled.img`
   width: 11rem;
   height: auto;
   padding: 2rem 0;
+  @media (max-width: 800px) {
+    width: 8rem;
+  }
 `
 
 export default function Footer() {
