@@ -12,7 +12,7 @@ const Article = styled.article`
   height: auto;
 `
 
-const Title = styled.section`
+const Header = styled.header`
   display: flex;
   flex-direction: column;
   width: 20vw;
@@ -23,12 +23,22 @@ const Title = styled.section`
 
 const Content = styled.section`
   width: calc(80vw - 14rem);
-  padding: 0;
+  max-width: calc(1400px - 14rem);
   height: auto;
   margin: 0 6rem;
+  padding: 0;
 `
 
-const LastLink = styled.h4`
+const Title = styled.h3`
+  font-weight: 300;
+  margin-top: 1rem;
+`
+
+const Mail = styled(Title)`
+  margin-top: 1rem;
+`
+
+const Link = styled(Title)`
   margin: 0;
 `
 
@@ -38,12 +48,12 @@ export default function Page({ data }) {
     <Layout>
       <SEO title={page.frontmatter.title} description={page.excerpt} />
       <Article>
-        <Title>
-          <h3>{page.frontmatter.name}</h3>
-          <h4>{page.frontmatter.title}</h4>
-          <h4>{page.frontmatter.email}</h4>
-          <LastLink>{page.frontmatter.website}</LastLink>
-        </Title>
+        <Header>
+          <h2>{page.frontmatter.name}</h2>
+          <Title>{page.frontmatter.title}</Title>
+          <Mail>{page.frontmatter.email}</Mail>
+          <Link>{page.frontmatter.website}</Link>
+        </Header>
         <Content>
           <div dangerouslySetInnerHTML={{ __html: page.html }} />
         </Content>
@@ -62,7 +72,6 @@ export const query = graphql`
         name
         email
         website
-        
       }
       excerpt
     }

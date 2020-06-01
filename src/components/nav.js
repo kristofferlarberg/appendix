@@ -13,7 +13,6 @@ const Container = styled.nav`
 
 const Title = styled.h1`
   color: black;
-  font-size: 1.7rem;
   text-align: left;
   width: 10rem;
 
@@ -24,7 +23,6 @@ const Title = styled.h1`
 
 const Ia = styled(Title)`
   color: black;
-  font-size: 1.7rem;
   text-align: center;
   width: 10rem;
 
@@ -35,7 +33,6 @@ const Ia = styled(Title)`
 
 const Year = styled(Title)`
   color: black;
-  font-size: 1.7rem;
   text-align: right;
   width: 10rem;
 

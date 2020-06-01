@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/appendix`,
+  /* pathPrefix: `/appendix`, */
   siteMetadata: {
     title: `Appendix`,
     description: `Documentation of the graduation projects from students at the Interior Architecture course at Konstfack, University of Arts, Crafts and Design. `,
@@ -29,9 +29,11 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1400,
+              height: "auto",
               linkImagesToOriginal: false,
               wrapperStyle: "margin: 2rem 0 0 0;",
-              showCaptions: true,
+              markdownCaptions: true,
+              showCaptions: ["title"],
             },
           },
           {
@@ -56,6 +58,18 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+/*           {
+            resolve: `gatsby-remark-interactive-gifs`,
+            options: {
+              root: `${__dirname}`,
+              src: `${__dirname}/src/images`,
+              dest: `${__dirname}/public/static/images`,
+              play: `${__dirname}/src/images/play.gif`,
+              placeholder: `${__dirname}/src/images/play.gif`,
+              loading: `${__dirname}/src/images/loading.gif`,
+              relativePath: `/static/images`,
+            },
+          }, */
         ],
       },
     },

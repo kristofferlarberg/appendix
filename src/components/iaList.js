@@ -19,6 +19,10 @@ const PaddingSection = styled.section`
   height: 100vh;
 `
 
+const Course = styled.h1`
+margin-bottom: 2rem;
+`
+
 export default function IaList(props) {
   const data = useStaticQuery(
     graphql`
@@ -51,7 +55,7 @@ export default function IaList(props) {
   return (
     <BorderSection>
       <PaddingSection>
-        <h2>Interior Architecture and Furniture Design (BA)</h2>
+        <Course>Interior Architecture and Furniture Design (BA)</Course>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Link to={node.fields.slug} key={node.id}>
             <Button>{node.frontmatter.name}</Button>

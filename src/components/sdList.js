@@ -18,6 +18,10 @@ const PaddingSection = styled.section`
   height: 100vh;
 `
 
+const Course = styled.h1`
+  margin-bottom: 2rem;
+`
+
 export default function SdList(props) {
   const data = useStaticQuery(
     graphql` 
@@ -50,7 +54,7 @@ export default function SdList(props) {
   return (
     <BorderSection>
       <PaddingSection>
-        <h2>Spatial Design (MA)</h2>
+        <Course>Spatial Design (MA)</Course>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Link to={node.fields.slug} key={node.id}>
             <Button>{node.frontmatter.name}</Button>

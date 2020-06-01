@@ -11,7 +11,7 @@ const Container = styled.footer`
 `
 
 const KonstfackLogo = styled.img`
-  width: 15rem;
+  width: 11rem;
   height: auto;
   padding: 2rem 0;
 `
