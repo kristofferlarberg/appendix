@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import Welcome from "../images/enter.jpg"
+import Welcome from "../images/exhibition.jpg"
 import Button from "./button"
 
 const Container = styled.div`
@@ -10,32 +10,33 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 2rem;
-  width: 60vw;
-  height: auto;
-  max-height: 100%;
-  margin-top: 1rem;
+  width: calc(100vw - 4rem);
+  height: calc(100vh - 4rem);
+  margin: 0;
+  position: fixed;
   z-index: 100;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: #aaa solid 1px;
-  background: white;
-  font-size: 1rem;
+  background: url(${Welcome});
+  background-size: 3000px auto;
+  background-repeat: no-repeat;
+  background-position: center;
 `
 
-const ImageContainer = styled.div`
+const TextBox = styled.div`
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
-  width: 100%;
-  border: 0;
+  flex-direction: column;
+  width: 60vw;
   padding: 2rem;
+  background-color: white;
 `
 
-const ExhibitionImage = styled.img`
-  width: 50%;
-  
+const Header = styled.h1`
+  text-align: center;
+  margin-bottom: 2rem;
+`
+
+const Text = styled.p`
+  margin-bottom: 2rem;
 `
 
 export default function Modal(props) {
@@ -52,23 +53,21 @@ export default function Modal(props) {
   )
   return (
     <Container {...props}>
-      <h1>{data.site.siteMetadata.title}</h1>
-      <ImageContainer>
-        <ExhibitionImage src={Welcome} alt="Exhibition image"></ExhibitionImage>
-        <ExhibitionImage src={Welcome} alt="Exhibition image"></ExhibitionImage>
-      </ImageContainer>
-      <p>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English. Many desktop publishing packages and web
-        page editors now use Lorem Ipsum as their default model text, and a
-        search for 'lorem ipsum' will uncover many web sites still in their
-        infancy. Various versions have evolved over the years, sometimes by
-        accident, sometimes on purpose (injected humour and the like).
-      </p>
-      <Button>Enter</Button>
+      <TextBox>
+        <Header>{data.site.siteMetadata.title}</Header>
+        <Text>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English. Many desktop publishing packages and web
+          page editors now use Lorem Ipsum as their default model text, and a
+          search for 'lorem ipsum' will uncover many web sites still in their
+          infancy. Various versions have evolved over the years, sometimes by
+          accident, sometimes on purpose (injected humour and the like).
+        </Text>
+        <Button>Enter</Button>
+      </TextBox>
     </Container>
   )
 }

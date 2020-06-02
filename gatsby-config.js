@@ -25,6 +25,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -58,18 +59,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-/*           {
-            resolve: `gatsby-remark-interactive-gifs`,
-            options: {
-              root: `${__dirname}`,
-              src: `${__dirname}/src/images`,
-              dest: `${__dirname}/public/static/images`,
-              play: `${__dirname}/src/images/play.gif`,
-              placeholder: `${__dirname}/src/images/play.gif`,
-              loading: `${__dirname}/src/images/loading.gif`,
-              relativePath: `/static/images`,
-            },
-          }, */
         ],
       },
     },

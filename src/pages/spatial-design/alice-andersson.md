@@ -23,6 +23,8 @@ Bakningens vardagliga betydelse har förändrats en hel del sedan vi fick en urb
 
 Genom att undersöka allmogetraditionens interiörer samt folkhemsköket, utforskar jag bakningens estetik och behov; hur kan form och textur berätta om matens process? I detta bakbord har jag inspirerats av degen själv med syfte att reflektera stadiet i bakprocessen. Genom att skapa engagerande möbler vill jag koppla oss kroppsligt och visuellt till en mer integrerad och ursprungsmedveten relation till mat.
 
+![gif](/test.gif)
+
 ![Image](../../images/ma_sd_alice_andersson/ma_sd_alice_andersson_1.jpg "#### Baking the kitchen – Exhibition <br> Photo: Sanna Lindberg")
 ![Image](../../images/ma_sd_alice_andersson/ma_sd_alice_andersson_3.jpg "#### Photo: Sanna Lindberg")
 ![Image](../../images/ma_sd_alice_andersson/ma_sd_alice_andersson_4.jpg "#### Photo: Sanna Lindberg")
