@@ -1,3 +1,4 @@
+/*
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -35,10 +36,64 @@ exports.createPages = async ({ graphql, actions }) => {
       path: node.fields.slug,
       component: path.resolve(`./src/templates/page.js`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
     })
   })
+}
+*/
+
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
+  const pageTemplate = path.resolve(
+    './src/templates/page.js'
+  )
+  return graphql(`
+    {
+      allMdx {
+        nodes {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            classOf
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+    const posts = result.data.allMdx.nodes
+    console.log(posts)
+
+    // create page for each mdx file
+    posts.forEach(post => {
+      const classOf = post.frontmatter.classOf.replace(/\s+/g, '-').toLowerCase();
+
+      createPage({
+        path: `${classOf}${post.fields.slug}`,
+        component: pageTemplate,
+        context: {
+          slug: post.fields.slug,
+        },
+      })
+    })
+  })
+}
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `Mdx`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }

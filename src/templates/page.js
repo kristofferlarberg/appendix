@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const Article = styled.article`
   display: flex;
@@ -54,7 +55,8 @@ const Link = styled(Title)`
 `
 
 export default function Page({ data }) {
-  const page = data.markdownRemark
+  const page = data.mdx
+  
   return (
     <Layout>
       <SEO title={page.frontmatter.title} description={page.excerpt} />
@@ -66,7 +68,9 @@ export default function Page({ data }) {
           <Link>{page.frontmatter.website}</Link>
         </Header>
         <Content>
-          <div dangerouslySetInnerHTML={{ __html: page.html }} />
+          <MDXRenderer>
+            {page.body}
+          </MDXRenderer>
         </Content>
       </Article>
     </Layout>
@@ -75,8 +79,8 @@ export default function Page({ data }) {
 
 export const query = graphql`
   query PostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
         name

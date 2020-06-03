@@ -76,15 +76,21 @@ module.exports = {
     },
 
     `gatsby-plugin-styled-components`,
-      /* {
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.mdx`, `.md`],
+        extensions: [`.mdx`],
         gatsbyRemarkPlugins: [
+          `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 1400,
+              height: "auto",
+              linkImagesToOriginal: false,
+              wrapperStyle: "margin: 2rem 0 0 0;",
+              markdownCaptions: false,
+              showCaptions: ["title"],
             },
           },
           {
@@ -106,6 +112,12 @@ module.exports = {
           },          
         ],
       },
-    }, */
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/students`,
+      },
+    },
   ],
 }

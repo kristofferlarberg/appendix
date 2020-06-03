@@ -33,11 +33,11 @@ export default function IaList(props) {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(
+        allMdx(
           sort: { fields: [frontmatter___name], order: ASC }
           filter: {
             frontmatter: {
-              tags: { in: "Interior Architecture and Furniture Design" }
+              classOf: { eq: "interior-architecture-and-furniture-design" }
             }
           }
         ) {
@@ -47,6 +47,7 @@ export default function IaList(props) {
               id
               frontmatter {
                 name
+                classOf
               }
               fields {
                 slug
@@ -62,11 +63,15 @@ export default function IaList(props) {
     <BorderSection>
       <PaddingSection>
         <Course>Interior Architecture and Furniture Design (BA)</Course>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Link to={node.fields.slug} key={node.id}>
-            <Button>{node.frontmatter.name}</Button>
-          </Link>
-        ))}
+        {data.allMdx.edges.map(({ node }) => {
+          const slugWithClass = `/${node.frontmatter.classOf}${node.fields.slug}`
+
+          return(
+            <Link to={slugWithClass} key={node.id}>
+              <Button>{node.frontmatter.name}</Button>
+            </Link>
+          )
+        })}
       </PaddingSection>
     </BorderSection>
   )
