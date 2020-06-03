@@ -69,18 +69,13 @@ export default function IaList(props) {
           const slugWithClass = `/${node.frontmatter.classOf}${node.fields.slug}`
 
           return(
-            <Link to={slugWithClass} key={node.id}>
-              <Button>{node.frontmatter.name}</Button>
-            </Link>
+            <ButtonContainer>
+              <Link to={slugWithClass} key={node.id}>
+                <Button>{node.frontmatter.name}</Button>
+              </Link>
+            </ButtonContainer>
           )
         })}
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <ButtonContainer>
-            <Link to={node.fields.slug} key={node.id}>
-              <Button>{node.frontmatter.name}</Button>
-            </Link>
-          </ButtonContainer>
-        ))}
       </PaddingSection>
     </BorderSection>
   )
