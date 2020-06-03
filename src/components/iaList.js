@@ -65,7 +65,6 @@ export default function IaList(props) {
     <BorderSection>
       <PaddingSection>
         <Course>Interior Architecture and Furniture Design (BA)</Course>
-<<<<<<< HEAD
         {data.allMdx.edges.map(({ node }) => {
           const slugWithClass = `/${node.frontmatter.classOf}${node.fields.slug}`
 
@@ -75,7 +74,6 @@ export default function IaList(props) {
             </Link>
           )
         })}
-=======
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <ButtonContainer>
             <Link to={node.fields.slug} key={node.id}>
@@ -83,7 +81,6 @@ export default function IaList(props) {
             </Link>
           </ButtonContainer>
         ))}
->>>>>>> 0455ff39f674449cbee112b4f0a19993051d84a7
       </PaddingSection>
     </BorderSection>
   )
