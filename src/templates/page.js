@@ -7,9 +7,10 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const Article = styled.article`
   display: flex;
-  margin: 2rem;
+  justify-content: center;
+  margin: 2rem 4rem;
   padding: 0;
-  width: auto;
+  width: calc(100vw - 8rem);
   height: auto;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -20,20 +21,20 @@ const Article = styled.article`
 const Header = styled.header`
   display: flex;
   flex-direction: column;
-  width: 20vw;
+  width: 25%;
   height: auto
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 auto;
     @media (max-width: 800px) {
     width: calc(100vw - 2rem);
   }
 `
 
 const Content = styled.section`
-  width: calc(80vw - 14rem);
-  max-width: calc(1400px - 14rem);
+  width: 75%;
+  max-width: 1400px;
   height: auto;
-  margin: 0 6rem;
+  margin: 0 auto 0 4rem;
   padding: 0;
   @media (max-width: 800px) {
     margin: 2rem 0 0 0;
@@ -50,7 +51,7 @@ const Mail = styled(Title)`
   margin-top: 1rem;
 `
 
-const Link = styled(Title)`
+const Website = styled(Title)`
   margin: 0;
 `
 
@@ -59,13 +60,14 @@ export default function Page({ data }) {
   
   return (
     <Layout>
-      <SEO title={page.frontmatter.title} description={page.excerpt} />
       <Article>
         <Header>
           <h2>{page.frontmatter.name}</h2>
           <Title>{page.frontmatter.title}</Title>
           <Mail>{page.frontmatter.email}</Mail>
-          <Link>{page.frontmatter.website}</Link>
+          <Website>
+            <a href={page.frontmatter.website}>{page.frontmatter.website}</a>
+          </Website>
         </Header>
         <Content>
           <MDXRenderer>

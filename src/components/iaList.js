@@ -6,27 +6,29 @@ import Button from "../components/button"
 
 const BorderSection = styled.section`
   margin: 0;
-  width: 50vw;
+  width: 50%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: center;
   border-right: 1px solid #aaa;
   @media (max-width: 800px) {
     width: 100vw;
     height: auto;
-    border-right: 0;
-    border-bottom: 1px solid #aaa;
   }
 `
 
 const PaddingSection = styled.section`
   padding: 2rem;
-  height: 100vh;
+  width: auto
+  height: auto;
 `
 
 const Course = styled.h1`
 margin-bottom: 2rem;
+`
+
+const ButtonContainer = styled.div`
+  width: fit-content;
 `
 
 export default function IaList(props) {
@@ -63,6 +65,7 @@ export default function IaList(props) {
     <BorderSection>
       <PaddingSection>
         <Course>Interior Architecture and Furniture Design (BA)</Course>
+<<<<<<< HEAD
         {data.allMdx.edges.map(({ node }) => {
           const slugWithClass = `/${node.frontmatter.classOf}${node.fields.slug}`
 
@@ -72,6 +75,15 @@ export default function IaList(props) {
             </Link>
           )
         })}
+=======
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <ButtonContainer>
+            <Link to={node.fields.slug} key={node.id}>
+              <Button>{node.frontmatter.name}</Button>
+            </Link>
+          </ButtonContainer>
+        ))}
+>>>>>>> 0455ff39f674449cbee112b4f0a19993051d84a7
       </PaddingSection>
     </BorderSection>
   )

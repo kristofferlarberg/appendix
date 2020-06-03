@@ -7,9 +7,10 @@ const Container = styled.footer`
   justify-content: flex-end;
   padding: 1rem 2rem;
   border-top: #aaa solid 1px;
+  width: auto;
   height: auto;
   @media (max-width: 800px) {
-    justify-content: center
+    justify-content: center;
   }
 `
 
