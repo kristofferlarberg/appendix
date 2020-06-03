@@ -2,7 +2,7 @@
 name: "Alice Andersson"
 title: "Baking the kitchen"
 email: "alicecarinandersson@gmail.com"
-website: "www.konstfack.se"
+website: ""
 tags: ["Spatial Design"]
 ---
 
@@ -23,13 +23,14 @@ Bakningens vardagliga betydelse har förändrats en hel del sedan vi fick en urb
 
 Genom att undersöka allmogetraditionens interiörer samt folkhemsköket, utforskar jag bakningens estetik och behov; hur kan form och textur berätta om matens process? I detta bakbord har jag inspirerats av degen själv med syfte att reflektera stadiet i bakprocessen. Genom att skapa engagerande möbler vill jag koppla oss kroppsligt och visuellt till en mer integrerad och ursprungsmedveten relation till mat.
 
-![gif](/test.gif)
+![Image](../../images/alice_andersson/ma_sd_alice_andersson_1.jpg "#### Baking the kitchen – Exhibition <br> Photo: Sanna Lindberg")
 
-![Image](../../images/ma_sd_alice_andersson/ma_sd_alice_andersson_1.jpg "#### Baking the kitchen – Exhibition <br> Photo: Sanna Lindberg")
-![Image](../../images/ma_sd_alice_andersson/ma_sd_alice_andersson_3.jpg "#### Photo: Sanna Lindberg")
-![Image](../../images/ma_sd_alice_andersson/ma_sd_alice_andersson_4.jpg "#### Photo: Sanna Lindberg")
-![Image](../../images/ma_sd_alice_andersson/ma_sd_alice_andersson_5.jpg "#### Photo: Sanna Lindberg")
-![Image](../../images/ma_sd_alice_andersson/ma_sd_alice_andersson_6.jpg)
-![Image](../../images/ma_sd_alice_andersson/ma_sd_alice_andersson_7.jpg "#### Photo: Sanna Lindberg")
+![Image](../../images/alice_andersson/ma_sd_alice_andersson_3.jpg "#### Detail <br> Photo: Sanna Lindberg")
 
-`vimeo: 417086807`
+![Image](../../images/alice_andersson/ma_sd_alice_andersson_4.jpg "#### Doughy <br> Photo: Sanna Lindberg")
+
+![Image](../../images/alice_andersson/ma_sd_alice_andersson_5.jpg "#### Material sample <br> Photo: Sanna Lindberg")
+
+![Image](../../images/alice_andersson/ma_sd_alice_andersson_6.jpg "#### Furniture concept <br> Photo: Sanna Lindberg")
+
+![Image](../../images/alice_andersson/ma_sd_alice_andersson_7.jpg "#### Exhibition <br> Photo: Sanna Lindberg")
