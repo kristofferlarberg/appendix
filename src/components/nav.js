@@ -7,6 +7,7 @@ const Container = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  width: auto;
   height: auto;
   border-bottom: #aaa solid 1px;
   @media (max-width: 800px) {

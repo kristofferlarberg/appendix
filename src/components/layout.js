@@ -5,13 +5,10 @@ import Modal from "./modal"
 
 import styled from "styled-components"
 
-const ViewPortContainer = styled.div`
-  width: 100%;
-`
-
 const Container = styled.main`
   display: flex;
   width: 100vw;
+  max-width: 98%;
   margin: 0;
   padding: 0;
   @media (max-width: 800px) {
@@ -25,7 +22,6 @@ const windowGlobal =
     : { localStorage: { getItem: () => false, setItem: () => true } }
 
 const Layout = ({ children }) => {
-
   const [firstVisit, toggleFirstVisit] = useState(
     JSON.parse(windowGlobal.localStorage.getItem("firstVisit") || true)
   )
@@ -33,16 +29,15 @@ const Layout = ({ children }) => {
   const handleHideModal = (toggle = false) => {
     toggleFirstVisit(toggle)
     windowGlobal.localStorage.setItem("firstVisit", toggle)
-    console.log("HEJ")
   }
 
   return (
-    <ViewPortContainer>
+    <>
       {firstVisit && <Modal onClick={() => handleHideModal(false)}></Modal>}
       <Nav></Nav>
       <Container>{children}</Container>
       <Footer></Footer>
-    </ViewPortContainer>
+    </>
   )
 }
 

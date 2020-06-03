@@ -1,0 +1,48 @@
+---
+name: "Elin Bucht"
+title: "Shhharing Spaces – An investigation of Östersund’s public library in relation to the Swedish national library strategy"
+email: "bucht.elin@gmail.com"
+website: ""
+tags: ["Spatial Design"]
+---
+
+”Use the libraries as society’s open spaces for mental cultivation, experiences and con-versations.”
+
+The Swedish national library strategy, published in 2019 by the Royal library on behalf of the government, with the utmost goal to strengthen democracy, describes a vision of a library for all in 2030.
+
+Historically, the library has been quiet rooms with collections of books. Something that does not support today’s nor future needs of a library. Is it possible to combine the vision of an open space with the old-time quiet library?
+
+Library of Östersund is a public library that has outgrown its premises from the 1950s, but due to savings, plans for a new library have been put on hold. I have examined how changes to the interior can support the aim to reach the goals of the Swedish national library strategy. Above all, to attract new groups without scaring away the visitors of to-day, or yesterday.
+
+The emphasis lies in how the spatial design can encourage activity versus focus, the im-portance of forms, flows and meetings of different materials, and how the relationship between architecture and body is formed from a diversity of perspectives.
+
+Svenska
+Namn på projekt: Shhharing Spaces - En undersökning av Östersunds bibliotek i relation till den svenska nationella biblioteksstrategin
+
+–
+
+”Använd biblioteken som samhällets öppna rum för bildning, upplevelser och samtal.”
+
+Den svenska nationella biblioteksstrategin, utgiven 2019 av Kungliga Biblioteket på upp-drag av regeringen, med det yttersta målet att stärka demokratin, beskriver en vision om ett bibliotek för alla år 2030.
+
+Historiskt har biblioteket varit tysta rum med samlingar av böcker.  Något som inte under-stödjer dagens och framtidens behov av ett bibliotek. Går det att kombinera visionen om samhällets öppna rum med den gamla tidens tysta bibliotek för böcker och läsande?
+
+Östersunds bibliotek är ett folkbibliotek som vuxit ur sina lokaler från 50-talet, men på grund av besparingar har planerna för ett nytt bibliotek lagts på is. Jag undersöker hur förändringar av interiören kan stöda arbetet att möta målen i den svenska nationella bib-lioteksstrategin. Framförallt att locka nya grupper till biblioteket, utan att för den delen skrämma bort dagens besökare.
+
+Betoningen ligger på hur den rumsliga gestaltningen kan uppmuntra till aktivitet kontra fokus, betydelsen av former, flöden och möten mellan olika material, samt hur förhållan-det mellan arkitektur och kropp utformas utifrån en mångfald av perspektiv.
+
+![Image](../../images/elin_bucht/ma_sd_elin_bucht_01.jpg "#### Shhharing Spaces, exhibition overview <br> Photo: Sanna Lindberg")
+
+![Image](../../images/elin_bucht/ma_sd_elin_bucht_02.jpg "#### Portrait and exhibition detail <br> Photo: Sanna Lindberg")
+
+![Image](../../images/elin_bucht/ma_sd_elin_bucht_03.jpg "#### The Stair, perspective drawing of the children’s library")
+
+![gif](/ma_sd_elin_bucht_04.gif "#### The Sofa, model in scale 1:10")
+
+![Image](../../images/elin_bucht/ma_sd_elin_bucht_05.jpg "#### The Sofa, perspective drawing of the children’s library")
+
+![Image](../../images/elin_bucht/ma_sd_elin_bucht_06.jpg "#### Exhibition detail of the Stage <br> Photo: Sanna Lindberg")
+
+![Image](../../images/elin_bucht/ma_sd_elin_bucht_07.jpg "#### The Stage, perspective drawing of library entrance hall")
+
+![gif](/ma_sd_elin_bucht_08.gif "#### The Sofa, model in scale 1:10")
