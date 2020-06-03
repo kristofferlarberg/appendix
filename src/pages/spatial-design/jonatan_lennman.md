@@ -2,7 +2,7 @@
 name: "Jonatan Lennman"
 title: "Running in the Romantic Zone"
 email: "info@jonatanlennman.se"
-website: "www.jonatanlennman.se"
+website: "http://www.jonatanlennman.se"
 tags: ["Spatial Design"]
 ---
 

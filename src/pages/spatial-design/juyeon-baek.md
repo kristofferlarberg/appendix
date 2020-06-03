@@ -2,7 +2,7 @@
 name: "Juyeon Baek"
 title: "A. piece of Space"
 email: "wndus5937@gmail.com "
-website: "juyeonbaek.myportfolio.com/"
+website: "http://juyeonbaek.myportfolio.com/"
 tags: ["Spatial Design"]
 ---
 

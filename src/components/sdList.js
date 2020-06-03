@@ -5,12 +5,11 @@ import Button from "../components/button"
 
 const BorderSection = styled.section`
   margin: 0;
-  width: 50vw;
+  width: 50%;
+  height: 100vh
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  border-right: 1px solid #aaa;
+  border-right: 0;
   @media (max-width: 800px) {
     width: 100vw;
     height: auto;
@@ -19,11 +18,16 @@ const BorderSection = styled.section`
 
 const PaddingSection = styled.section`
   padding: 2rem;
-  height: 100vh;
+  width: auto;
+  height: auto;
 `
 
 const Course = styled.h1`
   margin-bottom: 2rem;
+`
+
+const ButtonContainer = styled.div`
+  width: fit-content;
 `
 
 export default function SdList(props) {
@@ -60,9 +64,11 @@ export default function SdList(props) {
       <PaddingSection>
         <Course>Spatial Design (MA)</Course>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Link to={node.fields.slug} key={node.id}>
-            <Button>{node.frontmatter.name}</Button>
-          </Link>
+          <ButtonContainer>
+            <Link to={node.fields.slug} key={node.id}>
+              <Button>{node.frontmatter.name}</Button>
+            </Link>
+          </ButtonContainer>
         ))}
       </PaddingSection>
     </BorderSection>

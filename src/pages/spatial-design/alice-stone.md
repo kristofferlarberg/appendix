@@ -2,7 +2,7 @@
 name: "Alice Stone"
 title: "THE LOCAL HUB- A PHYSICAL FUTURE FOR BUSINESSES"
 email: "alice@alicestone.se"
-website: "www.alicestone.se"
+website: "http://www.alicestone.se"
 tags: ["Spatial Design"]
 ---
 

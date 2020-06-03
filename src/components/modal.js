@@ -27,7 +27,7 @@ const TextBox = styled.div`
   flex-direction: column;
   width: 60vw;
   padding: 2rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
 `
 
 const Header = styled.h1`
