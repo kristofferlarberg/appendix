@@ -1,5 +1,5 @@
 module.exports = {
-  /* pathPrefix: `/appendix`, */
+  pathPrefix: `/appendix`,
   siteMetadata: {
     title: `Appendix`,
     description: `Documentation of the graduation projects from students at the Interior Architecture course at Konstfack, University of Arts, Crafts and Design.`,
