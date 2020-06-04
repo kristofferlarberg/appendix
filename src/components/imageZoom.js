@@ -17,17 +17,15 @@ const Figure = styled.figure`
     ${props => {
       if (props.state) {
         return `
-          background: green;
-          cursor: url("/icon-move.png") 0 0, zoom-out!important; /* Legacy */
-          cursor: url("/icon-move.svg") 0 0, zoom-out!important; /* FF */
-          cursor: -webkit-image-set(url("/icon-move.png") 1x, url("/icon-move@2x.png") 2x) 0 0, zoom-out!important; /* Webkit */
+          cursor: url("/appendix/icon-move.png") 0 0, zoom-out!important; /* Legacy */
+          cursor: url("/appendix/icon-move.svg") 0 0, zoom-out!important; /* FF */
+          cursor: -webkit-image-set(url("/appendix/icon-move.png") 1x, url("/appendix/icon-move@2x.png") 2x) 0 0, zoom-out!important; /* Webkit */
       `
       } else {
         return `
-          background: blue;
-          cursor: url("/icon-zoom.png") 0 0, zoom-in!important; /* Legacy */
-          cursor: url("/icon-zoom.svg") 0 0, zoom-in!important; /* FF */
-          cursor: -webkit-image-set(url("/icon-zoom.png") 1x, url("/icon-zoom@2x.png") 2x) 0 0, zoom-in!important; /* Webkit */
+          cursor: url("/appendix/icon-zoom.png") 0 0, zoom-in!important; /* Legacy */
+          cursor: url("/appendix/icon-zoom.svg") 0 0, zoom-in!important; /* FF */
+          cursor: -webkit-image-set(url("/appendix/icon-zoom.png") 1x, url("/appendix/icon-zoom@2x.png") 2x) 0 0, zoom-in!important; /* Webkit */
       `
       }
     }}
