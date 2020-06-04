@@ -72,7 +72,7 @@ export default function Page({ data }) {
         <Header>
           <h2>{page.frontmatter.name}</h2>
           <Title>{page.frontmatter.title}</Title>
-          <Mail>{page.frontmatter.email}</Mail>
+          <Mail><a href={`mailto:${page.frontmatter.email}`}>{page.frontmatter.email}</a></Mail>
           <Website>
             <a href={page.frontmatter.website}>{page.frontmatter.website}</a>
           </Website>
