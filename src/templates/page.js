@@ -8,10 +8,11 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 const Article = styled.article`
   display: flex;
   justify-content: center;
-  margin: 2rem 4rem;
+  margin: 2rem 8rem;
   padding: 0;
-  width: calc(100vw - 8rem);
+  width: calc(100vw - 16rem);
   height: auto;
+  min-height: 100vh;
   @media (max-width: 800px) {
     flex-direction: column;
     margin: 1rem;
@@ -34,7 +35,7 @@ const Content = styled.section`
   width: 75%;
   max-width: 1400px;
   height: auto;
-  margin: 0 auto 0 4rem;
+  margin: 0 auto 0 8rem;
   padding: 0;
   @media (max-width: 800px) {
     margin: 2rem 0 0 0;
