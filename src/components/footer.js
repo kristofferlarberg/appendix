@@ -5,6 +5,7 @@ import Logo from "../images/konstfack-stor.png"
 const Container = styled.footer`
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
   padding: 1rem 2rem;
   border-top: #aaa solid 1px;
   width: auto;

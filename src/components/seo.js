@@ -60,7 +60,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         },
         {
           property: `og:image`,
-          content: image
+          content: image,
         },
         {
           name: `twitter:creator`,

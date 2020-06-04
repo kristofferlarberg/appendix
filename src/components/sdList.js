@@ -32,15 +32,11 @@ const ButtonContainer = styled.div`
 
 export default function SdList(props) {
   const data = useStaticQuery(
-    graphql` 
+    graphql`
       query {
         allMdx(
           sort: { fields: [frontmatter___name], order: ASC }
-          filter: {
-            frontmatter: {
-              classOf: { eq: "spatial-design" }
-            }
-          }
+          filter: { frontmatter: { classOf: { eq: "spatial-design" } } }
         ) {
           totalCount
           edges {
@@ -67,9 +63,9 @@ export default function SdList(props) {
         {data.allMdx.edges.map(({ node }) => {
           const slugWithClass = `/${node.frontmatter.classOf}${node.fields.slug}`
 
-          return(
-            <ButtonContainer>
-              <Link to={slugWithClass} key={node.id}>
+          return (
+            <ButtonContainer key={node.id}>
+              <Link to={slugWithClass}>
                 <Button>{node.frontmatter.name}</Button>
               </Link>
             </ButtonContainer>

@@ -24,7 +24,7 @@ const PaddingSection = styled.section`
 `
 
 const Course = styled.h1`
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
 `
 
 const ButtonContainer = styled.div`
@@ -68,9 +68,9 @@ export default function IaList(props) {
         {data.allMdx.edges.map(({ node }) => {
           const slugWithClass = `/${node.frontmatter.classOf}${node.fields.slug}`
 
-          return(
-            <ButtonContainer>
-              <Link to={slugWithClass} key={node.id}>
+          return (
+            <ButtonContainer key={node.id}>
+              <Link to={slugWithClass}>
                 <Button>{node.frontmatter.name}</Button>
               </Link>
             </ButtonContainer>

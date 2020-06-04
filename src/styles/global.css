@@ -81,6 +81,10 @@ img {
   margin: 2rem 0 0 0;
 }
 
+.gatsby-resp-image-figure:first-of-type {
+  margin-top: 3rem;
+}
+
 @media (max-width: 800px) {
   h1 {
     font-size: 1.2rem;

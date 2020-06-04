@@ -5,7 +5,9 @@ import styled from "styled-components"
 const Figure = styled.figure`
   position: relative;
 
-  ${({ isTallImage }) => isTallImage && `
+  ${({ isTallImage }) =>
+    isTallImage &&
+    `
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -41,41 +43,41 @@ const TouchOverlay = styled.div`
   height: 25px;
 
   .zoom {
-    display: ${props => props.state ? 'none' : 'block'}
+    display: ${props => (props.state ? "none" : "block")};
   }
 
   .move {
-    display: ${props => props.state ? 'block' : 'none'}
+    display: ${props => (props.state ? "block" : "none")};
   }
 `
 
 function isMobileDevice() {
-  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-};
+  return (
+    typeof window.orientation !== "undefined" ||
+    navigator.userAgent.indexOf("IEMobile") !== -1
+  )
+}
 
-const ImageZoom = ({preview, alt, zoom, caption, isTallImage}) => {
-  const [dragToMove, setDragToMove] = useState();
-  const [currentState, setCurrentState] = useState(false);
-  
+const ImageZoom = ({ preview, alt, zoom, caption, isTallImage }) => {
+  const [dragToMove, setDragToMove] = useState()
+  const [currentState, setCurrentState] = useState(false)
+
   useEffect(() => {
     setDragToMove(isMobileDevice())
   }, [])
 
   return (
-    <Figure 
+    <Figure
       className="gatsby-resp-image-figure"
       isTallImage={isTallImage}
       state={currentState}
     >
-
-      {dragToMove &&
-        <TouchOverlay
-          state={currentState}
-        >
+      {dragToMove && (
+        <TouchOverlay state={currentState}>
           <img alt="Zoom In" className="zoom" src="/icon-zoom.png" />
           <img alt="Move" className="move" src="/icon-move.png" />
         </TouchOverlay>
-      }
+      )}
 
       <Magnifier
         imageSrc={preview}
@@ -88,7 +90,7 @@ const ImageZoom = ({preview, alt, zoom, caption, isTallImage}) => {
         onZoomEnd={() => setCurrentState(false)}
       />
       <figcaption className="gatsby-resp-image-figcaption">
-        <h4 dangerouslySetInnerHTML={{__html: caption}} />
+        <h4 dangerouslySetInnerHTML={{ __html: caption }} />
       </figcaption>
     </Figure>
   )

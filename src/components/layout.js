@@ -8,7 +8,7 @@ import styled from "styled-components"
 const Container = styled.main`
   display: flex;
   width: 100vw;
-  max-width: 98%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   @media (max-width: 800px) {

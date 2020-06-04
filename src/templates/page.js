@@ -53,11 +53,11 @@ const Content = styled.section`
 
 const Title = styled.h3`
   font-weight: 300;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 `
 
 const Mail = styled(Title)`
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 `
 
 const Website = styled(Title)`
@@ -66,23 +66,30 @@ const Website = styled(Title)`
 
 export default function Page({ data }) {
   const page = data.mdx
-  
+
   return (
     <Layout>
-      <SEO title={page.frontmatter.name} description={page.frontmatter.description} />
+      <SEO
+        title={page.frontmatter.name}
+        description={page.frontmatter.description}
+      />
       <Article>
         <Header>
           <h2>{page.frontmatter.name}</h2>
           <Title>{page.frontmatter.title}</Title>
-          <Mail><a href={`mailto:${page.frontmatter.email}`}>{page.frontmatter.email}</a></Mail>
+          <Mail>
+            <a href={`mailto:${page.frontmatter.email}`}>
+              {page.frontmatter.email}
+            </a>
+          </Mail>
           <Website>
-            <a href={page.frontmatter.website}>{page.frontmatter.website}</a>
+            <a href={page.frontmatter.website} target="_blank" rel="noreferrer">
+              {page.frontmatter.website}
+            </a>
           </Website>
         </Header>
         <Content>
-          <MDXRenderer>
-            {page.body}
-          </MDXRenderer>
+          <MDXRenderer>{page.body}</MDXRenderer>
         </Content>
       </Article>
     </Layout>

@@ -2,7 +2,7 @@ module.exports = {
   /* pathPrefix: `/appendix`, */
   siteMetadata: {
     title: `Appendix`,
-    description: `Documentation of the graduation projects from students at the Interior Architecture course at Konstfack, University of Arts, Crafts and Design. `,
+    description: `Documentation of the graduation projects from students at the Interior Architecture course at Konstfack, University of Arts, Crafts and Design.`,
     author: `Kristoffer Larberg, Per Sturesson`,
     url: `https://www.konstfack2020.se/appendix`,
     og_image: `og_image.jpg`,
@@ -66,7 +66,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`],
-        remarkPlugins: [require('remark-unwrap-images')],
+        remarkPlugins: [require("remark-unwrap-images")],
         gatsbyRemarkPlugins: [
           `gatsby-remark-copy-linked-files`,
           {
@@ -85,7 +85,7 @@ module.exports = {
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
-          },  
+          },
         ],
       },
     },
