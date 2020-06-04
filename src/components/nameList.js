@@ -1,4 +1,4 @@
-import React from "react"
+/* import React from "react"
 import styled from "styled-components"
 
 const BorderSection = styled.section`
@@ -23,3 +23,4 @@ const NameList = ({ children }) => (
 )
 
 export default NameList
+ */
