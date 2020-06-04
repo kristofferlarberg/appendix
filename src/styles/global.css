@@ -69,6 +69,10 @@ img {
   width: 100%;
 }
 
+.gatsby-resp-image-figure {
+  margin: 0 0 2rem 0;
+}
+
 .gatsby-resp-image-figcaption {
   margin: 0.4rem 0 0 0.4rem;
 }
