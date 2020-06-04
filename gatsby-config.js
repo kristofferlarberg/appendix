@@ -8,6 +8,7 @@ module.exports = {
     og_image: `og_image.jpg`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
