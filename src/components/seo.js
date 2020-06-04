@@ -1,9 +1,9 @@
-/* import React from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
+function SEO({ description, lang, meta, title, pathname }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -12,8 +12,8 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
             title
             description
             author
-            keywords
-            siteUrl
+            url
+            og_image
           }
         }
       }
@@ -21,10 +21,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const image =
-    metaImage && metaImage.src
-      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      : null
+  const image = `${site.siteMetadata.url}/${site.siteMetadata.og_image}`
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
   return (
@@ -50,10 +47,6 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
           content: metaDescription,
         },
         {
-          name: "keywords",
-          content: site.siteMetadata.keywords.join(","),
-        },
-        {
           property: `og:title`,
           content: title,
         },
@@ -64,6 +57,10 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: image
         },
         {
           name: `twitter:creator`,
@@ -77,35 +74,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ]
-        .concat(
-          metaImage
-            ? [
-                {
-                  property: "og:image",
-                  content: image,
-                },
-                {
-                  property: "og:image:width",
-                  content: metaImage.width,
-                },
-                {
-                  property: "og:image:height",
-                  content: metaImage.height,
-                },
-                {
-                  name: "twitter:card",
-                  content: "summary_large_image",
-                },
-              ]
-            : [
-                {
-                  name: "twitter:card",
-                  content: "summary",
-                },
-              ]
-        )
-        .concat(meta)}
+      ].concat(meta)}
     />
   )
 }
@@ -130,4 +99,3 @@ SEO.propTypes = {
 }
 
 export default SEO
- */

@@ -68,6 +68,7 @@ export default function Page({ data }) {
   
   return (
     <Layout>
+      <SEO title={page.frontmatter.name} description={page.frontmatter.description} />
       <Article>
         <Header>
           <h2>{page.frontmatter.name}</h2>
@@ -96,6 +97,7 @@ export const query = graphql`
         name
         email
         website
+        description
       }
       excerpt
     }
