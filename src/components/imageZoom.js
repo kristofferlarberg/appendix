@@ -72,8 +72,8 @@ const ImageZoom = ({ preview, alt, zoom, caption, isTallImage }) => {
     >
       {dragToMove && (
         <TouchOverlay state={currentState}>
-          <img alt="Zoom In" className="zoom" src="/icon-zoom.png" />
-          <img alt="Move" className="move" src="/icon-move.png" />
+          <img alt="Zoom In" className="zoom" src="/appendix/icon-zoom.png" />
+          <img alt="Move" className="move" src="/appendix/icon-move.png" />
         </TouchOverlay>
       )}
 
