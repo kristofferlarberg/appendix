@@ -14,7 +14,7 @@ function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
-const ImageZoom = ({preview, zoom, caption, isTallImage}) => {
+const ImageZoom = ({preview, alt, zoom, caption, isTallImage}) => {
   const [dragToMove, setDragToMove] = useState();
   
   useEffect(() => {
@@ -28,7 +28,7 @@ const ImageZoom = ({preview, zoom, caption, isTallImage}) => {
     >
       <Magnifier
         imageSrc={preview}
-        imageAlt="Example"
+        imageAlt={alt}
         largeImageSrc={zoom}
         dragToMove={dragToMove}
       />

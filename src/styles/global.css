@@ -70,11 +70,15 @@ img {
 }
 
 .gatsby-resp-image-figure {
-  margin: 0 0 2rem 0;
+  margin: 2rem 0 0 0;
 }
 
 .gatsby-resp-image-figcaption {
   margin: 0.4rem 0 0 0.4rem;
+}
+
+.gatsby-resp-iframe-wrapper {
+  margin: 2rem 0 0 0;
 }
 
 @media (max-width: 800px) {

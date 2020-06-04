@@ -38,22 +38,6 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-embed-video",
-            options: {
-              width: 1000,
-              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
-              urlOverrides: [
-                {
-                  id: "youtube",
-                  embedURL: videoId =>
-                    `https://www.youtube-nocookie.com/embed/${videoId}`,
-                },
-              ],
-            },
-          },
-          {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
@@ -80,6 +64,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`],
+        remarkPlugins: [require('remark-unwrap-images')],
         gatsbyRemarkPlugins: [
           `gatsby-remark-copy-linked-files`,
           {
@@ -91,22 +76,6 @@ module.exports = {
               wrapperStyle: "margin: 2rem 0 0 0;",
               markdownCaptions: false,
               showCaptions: ["title"],
-            },
-          },
-          {
-            resolve: "gatsby-remark-embed-video",
-            options: {
-              width: 1000,
-              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
-              urlOverrides: [
-                {
-                  id: "youtube",
-                  embedURL: videoId =>
-                    `https://www.youtube-nocookie.com/embed/${videoId}`,
-                },
-              ],
             },
           },
           {

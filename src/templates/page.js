@@ -40,6 +40,14 @@ const Content = styled.section`
     margin: 2rem 0 0 0;
     width: calc(100vw - 2rem);
   }
+
+  img {
+    margin: 2rem 0 0 0;
+  }
+
+  .gatsby-resp-image-figure img {
+    margin: 0;
+  }
 `
 
 const Title = styled.h3`
