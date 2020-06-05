@@ -6,7 +6,7 @@ A platform which presents the graduate projects from the programs MA Spatial Des
 ## Install
 Run `npm install` to download package and dependencies. This project was bootstrapped with `gatsby new my-hello-world-starter`.
 
-![Image of homepage](https://github.com/kristofferlarberg/portfolio/raw/master/screenshot.png)
+![Image of homepage](https://github.com/kristofferlarberg/appendix/raw/master/screenshot.png)
 
 ## Developers
 - [Kristoffer Larberg](https://github.com/kristofferlarberg)
