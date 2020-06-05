@@ -28,6 +28,7 @@ const TextBox = styled.div`
   width: 60vw;
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
 `
 
 const Header = styled.h1`
@@ -56,9 +57,9 @@ export default function Modal(props) {
       <TextBox>
         <Header>{data.site.siteMetadata.title}</Header>
         <Text>
-          Documentation of the graduation projects from students at the Interior
-          Architecture course at Konstfack, University of Arts, Crafts and
-          Design.
+          Welcome to this platform which presents the graduate projects from the
+          programs MA Spatial Design and BA Interior Architecture & Furniture
+          Design at Konstfack 2020.
         </Text>
         <Button>Enter</Button>
       </TextBox>

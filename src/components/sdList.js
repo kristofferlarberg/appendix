@@ -20,6 +20,11 @@ const PaddingSection = styled.section`
   padding: 2rem;
   width: auto;
   height: auto;
+  @media (max-width: 800px) {
+    width: auto;
+    height: auto;
+    padding: 1rem;
+  }
 `
 
 const Course = styled.h1`

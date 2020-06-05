@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/appendix`,
   siteMetadata: {
     title: `Appendix`,
-    description: `Documentation of the graduation projects from students at the Interior Architecture course at Konstfack, University of Arts, Crafts and Design.`,
+    description: `Welcome to this platform which presents the graduate projects from the programs MA Spatial Design and BA Interior Architecture & Furniture Design at Konstfack 2020.`,
     author: `Kristoffer Larberg, Per Sturesson`,
     url: `https://www.konstfack2020.se/appendix`,
     og_image: `og_image.jpg`,

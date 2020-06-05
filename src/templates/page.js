@@ -16,6 +16,7 @@ const Article = styled.article`
   @media (max-width: 800px) {
     flex-direction: column;
     margin: 1rem;
+    width: calc(100vw - 2rem);
   }
 `
 
