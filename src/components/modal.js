@@ -25,7 +25,7 @@ const TextBox = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 60vw;
+  width: 35vw;
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
@@ -57,11 +57,11 @@ export default function Modal(props) {
       <TextBox>
         <Header>{data.site.siteMetadata.title}</Header>
         <Text>
-          Welcome to this platform which presents the graduate projects from the
-          programs MA Spatial Design and BA Interior Architecture & Furniture
-          Design at Konstfack 2020.
+          MA Spatial Design<br></br>
+          BA Interior Architecture & Furniture Design<br></br>
+          Konstfack 2020
         </Text>
-        <Button>Enter</Button>
+        <Button>Enter the Exhibition</Button>
       </TextBox>
     </Container>
   )

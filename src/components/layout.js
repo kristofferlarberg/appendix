@@ -19,16 +19,16 @@ const Container = styled.main`
 const windowGlobal =
   typeof window !== "undefined"
     ? window
-    : { localStorage: { getItem: () => false, setItem: () => true } }
+    : { sessionStorage: { getItem: () => false, setItem: () => true } }
 
 const Layout = ({ children }) => {
   const [firstVisit, toggleFirstVisit] = useState(
-    JSON.parse(windowGlobal.localStorage.getItem("firstVisit") || true)
+    JSON.parse(windowGlobal.sessionStorage.getItem("firstVisit") || true)
   )
 
   const handleHideModal = (toggle = false) => {
     toggleFirstVisit(toggle)
-    windowGlobal.localStorage.setItem("firstVisit", toggle)
+    windowGlobal.sessionStorage.setItem("firstVisit", toggle)
   }
 
   return (
