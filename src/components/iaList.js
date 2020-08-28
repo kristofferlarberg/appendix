@@ -20,7 +20,7 @@ const BorderSection = styled.section`
 
 const PaddingSection = styled.section`
   padding: 2rem;
-  width: auto
+  width: auto;
   height: auto;
     @media (max-width: 800px) {
     width: auto;

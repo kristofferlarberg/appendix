@@ -16,6 +16,10 @@ const Container = styled.main`
   }
 `
 
+const Description = styled.section`
+  display: none;
+`
+
 const windowGlobal =
   typeof window !== "undefined"
     ? window
@@ -35,6 +39,11 @@ const Layout = ({ children }) => {
     <>
       {firstVisit && <Modal onClick={() => handleHideModal(false)}></Modal>}
       <Nav></Nav>
+      <Description>
+        Welcome to this platform which presents the graduate projects from the
+        programs MA Spatial Design and BA Interior Architecture & Furniture
+        Design at Konstfack 2020.
+      </Description>
       <Container>{children}</Container>
       <Footer></Footer>
     </>
